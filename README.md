@@ -76,7 +76,7 @@ El backend está diseñado de forma modular y puede escalar fácilmente para inc
 
 ## 🌐 Enlace a la demostración
 
-👉 Enlace directo a la demo: (https://benja-menis.github.io/gimnasio.web)
+👉 Enlace directo a la demo: https://benja-menis.github.io/landing-page-gimansio-.io
 
 ---
 
