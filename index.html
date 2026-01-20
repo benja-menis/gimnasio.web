@@ -1,0 +1,1161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PowerFit Gym - Transformá tu cuerpo y tu vida</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <h1>PowerFit Gym</h1>
+  <button class="hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+  <nav id="nav">
+    <a href="#hero">Home</a>
+    <a href="#benefits">Servicios</a>
+    <a href="#branches">Sucursales</a>
+    <a href="#pricing">Planes</a>
+    <a href="#testimonials">Testimonios</a>
+    <a href="#contact">Contacto</a>
+  </nav>
+  <div class="nav-overlay" id="navOverlay"></div>
+  <div class="contact-info">📞 +54 9 11 1234-5678</div>
+</header>
+
+<!-- HERO -->
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="hero-content">
+    <h2>Transformá tu cuerpo y tu vida en PowerFit Gym</h2>
+    <p>Con más de 5 sucursales en todo el país y entrenadores certificados</p>
+    <button onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">¡Inscribite ahora!</button>
+  </div>
+</section>
+
+<!-- BENEFICIOS -->
+<section class="benefits" id="benefits">
+  <div class="benefit">
+    <img src="https://img.icons8.com/ios-filled/100/6b8e23/dumbbell.png"/>
+    <h4>Entrenadores Certificados</h4>
+    <p>Profesionales capacitados que diseñan tu plan ideal.</p>
+  </div>
+  <div class="benefit">
+    <img src="https://img.icons8.com/ios-filled/100/6b8e23/clock.png"/>
+    <h4>Horarios Flexibles</h4>
+    <p>Entrená a cualquier hora, adaptándonos a tu rutina.</p>
+  </div>
+  <div class="benefit">
+    <img src="https://img.icons8.com/ios-filled/100/6b8e23/line-chart.png"/>
+    <h4>Programas Personalizados</h4>
+    <p>Fitness, crossfit, yoga y más, según tus objetivos.</p>
+  </div>
+  <div class="benefit">
+    <img src="https://img.icons8.com/ios-filled/100/6b8e23/smartphone.png"/>
+    <h4>App de Seguimiento</h4>
+    <p>Controlá tu progreso desde tu celular.</p>
+  </div>
+</section>
+
+<!-- SERVICIOS -->
+<section class="services" id="services">
+  <h2>Servicios y Clases</h2>
+  <div class="service-cards">
+    <div class="service-card">
+      <img src="images/gimnasio-completo.jpg" alt="Gym">
+      <div class="service-card-content">
+        <h3>Gimnasio Completo</h3>
+        <p>Equipos modernos para fuerza, cardio y resistencia.</p>
+      </div>
+    </div>
+    <div class="service-card">
+      <img src="images/grupales.jpg" alt="Clases Grupales">
+      <div class="service-card-content">
+        <h3>Clases Grupales</h3>
+        <p>Yoga, pilates, crossfit y más en horarios variados.</p>
+      </div>
+    </div>
+    <div class="service-card">
+      <img src="images/entrenamiento-personal.jpg" alt="Entrenamiento Personal">
+      <div class="service-card-content">
+        <h3>Entrenamiento Personalizado</h3>
+        <p>Planes individuales con seguimiento profesional.</p>
+      </div>
+    </div>
+    <div class="service-card">
+      <img src="images/nutricipnista.jpg" alt="Nutrición">
+      <div class="service-card-content">
+        <h3>Nutrición</h3>
+        <p>Planes de alimentación saludable adaptados a vos.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =============================================
+     PLANES Y PRECIOS - Enhanced Pricing Section
+     ============================================= -->
+<section class="pricing" id="pricing">
+  <h2>Planes y Precios</h2>
+  <p class="pricing-subtitle">Elegi el plan que mejor se adapte a tus objetivos. Sin contratos ocultos, cancela cuando quieras.</p>
+
+  <!-- Billing Toggle (Monthly/Annual view) -->
+  <div class="billing-toggle">
+    <span class="active" id="monthlyLabel">Pago Mensual</span>
+    <div class="toggle-switch" id="billingToggle" role="switch" aria-checked="false" tabindex="0"></div>
+    <span id="annualLabel">Pago Anual</span>
+    <span class="save-badge">Ahorra 17%</span>
+  </div>
+
+  <!-- Pricing Carousel Container -->
+  <div class="pricing-carousel" id="pricingCarousel">
+    <!-- Navigation Buttons (visible on mobile) -->
+    <button class="pricing-nav-btn prev" id="pricingPrevBtn" aria-label="Plan anterior">&#8249;</button>
+    <button class="pricing-nav-btn next" id="pricingNextBtn" aria-label="Siguiente plan">&#8250;</button>
+
+    <div class="price-cards" id="priceCardsTrack">
+
+      <!-- Plan Mensual -->
+      <div class="price-card" data-plan="monthly" data-plan-name="Plan Mensual" data-plan-price="40" data-plan-icon="🏋️">
+      <div class="plan-icon" aria-hidden="true">🏋️</div>
+      <h3>Plan Mensual</h3>
+      <p class="plan-description">Ideal para probar y comenzar tu transformacion sin compromiso a largo plazo.</p>
+
+      <div class="price-container">
+        <div class="price">
+          <span class="currency">$</span>
+          <span class="amount" data-monthly="40" data-annual="34">40</span>
+        </div>
+        <p class="period">por mes</p>
+      </div>
+
+      <ul class="features-list">
+        <li>
+          <span class="check-icon" aria-hidden="true">✓</span>
+          <span>Acceso completo al gimnasio</span>
+        </li>
+        <li>
+          <span class="check-icon" aria-hidden="true">✓</span>
+          <span>Uso de equipamiento cardio y fuerza</span>
+        </li>
+        <li>
+          <span class="check-icon" aria-hidden="true">✓</span>
+          <span>Vestuarios con duchas y lockers</span>
+        </li>
+        <li>
+          <span class="check-icon" aria-hidden="true">✓</span>
+          <span>App de seguimiento basica</span>
+        </li>
+      </ul>
+
+      <button class="cta-btn" type="button" data-select-plan="monthly">
+        <span>Comenzar Ahora</span>
+        <span class="btn-arrow" aria-hidden="true">→</span>
+      </button>
+    </div>
+
+    <!-- Plan Trimestral (Featured) -->
+    <div class="price-card featured" data-plan="quarterly" data-plan-name="Plan Trimestral" data-plan-price="37" data-plan-icon="⚡">
+      <span class="popular-badge">Mas Popular</span>
+      <div class="plan-icon" aria-hidden="true">⚡</div>
+      <h3>Plan Trimestral</h3>
+      <p class="plan-description">Nuestro plan mas elegido. Compromiso perfecto para ver resultados reales.</p>
+
+      <div class="price-container">
+        <div class="price">
+          <span class="currency">$</span>
+          <span class="amount" data-monthly="37" data-annual="31">37</span>
+        </div>
+        <p class="period">por mes (facturado trimestralmente)</p>
+        <p class="original-price">$40/mes</p>
+        <span class="savings">Ahorras $9 en 3 meses</span>
+      </div>
+
+      <ul class="features-list">
+        <li>
+          <span class="check-icon" aria-hidden="true">✓</span>
+          <span>Todo lo del Plan Mensual</span>
+        </li>
+        <li>
+          <span class="check-icon" aria-hidden="true">✓</span>
+          <span>Evaluacion fisica mensual personalizada</span>
+        </li>
+        <li>
+          <span class="check-icon" aria-hidden="true">✓</span>
+          <span>Acceso a clases grupales ilimitadas</span>
+        </li>
+        <li>
+          <span class="check-icon" aria-hidden="true">✓</span>
+          <span>1 sesion de entrenamiento personal/mes</span>
+        </li>
+        <li>
+          <span class="check-icon" aria-hidden="true">✓</span>
+          <span>Descuentos en productos y suplementos</span>
+        </li>
+      </ul>
+
+      <button class="cta-btn" type="button" data-select-plan="quarterly">
+        <span>Elegir Plan</span>
+        <span class="btn-arrow" aria-hidden="true">→</span>
+      </button>
+    </div>
+
+    <!-- Plan Anual -->
+    <div class="price-card" data-plan="annual" data-plan-name="Plan Anual" data-plan-price="33" data-plan-icon="🏆">
+      <div class="plan-icon" aria-hidden="true">🏆</div>
+      <h3>Plan Anual</h3>
+      <p class="plan-description">Maximo ahorro y beneficios premium para los mas comprometidos.</p>
+
+      <div class="price-container">
+        <div class="price">
+          <span class="currency">$</span>
+          <span class="amount" data-monthly="33" data-annual="28">33</span>
+        </div>
+        <p class="period">por mes (facturado anualmente)</p>
+        <p class="original-price">$40/mes</p>
+        <span class="savings">Ahorras $84 al ano</span>
+      </div>
+
+      <ul class="features-list">
+        <li>
+          <span class="check-icon" aria-hidden="true">✓</span>
+          <span>Todo lo del Plan Trimestral</span>
+        </li>
+        <li>
+          <span class="check-icon" aria-hidden="true">✓</span>
+          <span>2 sesiones de entrenamiento personal/mes</span>
+        </li>
+        <li>
+          <span class="check-icon" aria-hidden="true">✓</span>
+          <span>Plan nutricional personalizado</span>
+        </li>
+        <li>
+          <span class="check-icon" aria-hidden="true">✓</span>
+          <span>Acceso a todas las sucursales</span>
+        </li>
+        <li>
+          <span class="check-icon" aria-hidden="true">✓</span>
+          <span>Invitaciones gratuitas para amigos (2/mes)</span>
+        </li>
+        <li>
+          <span class="check-icon" aria-hidden="true">✓</span>
+          <span>Acceso prioritario a nuevas clases</span>
+        </li>
+      </ul>
+
+      <button class="cta-btn" type="button" data-select-plan="annual">
+        <span>Mejor Valor</span>
+        <span class="btn-arrow" aria-hidden="true">→</span>
+      </button>
+    </div>
+
+    </div>
+
+    <!-- Carousel Dots (visible on mobile) -->
+    <div class="pricing-dots" id="pricingDots"></div>
+  </div>
+
+  <!-- Guarantee Badge -->
+  <div class="pricing-guarantee">
+    <span class="guarantee-icon" aria-hidden="true">🛡️</span>
+    <span><strong>Garantia de satisfaccion:</strong> 7 dias de prueba. Si no estas conforme, te devolvemos tu dinero.</span>
+  </div>
+
+</section>
+
+<!-- Pricing Toggle Script -->
+<script>
+/**
+ * =============================================
+ * PRICING TOGGLE - Monthly/Annual Price Switch
+ * =============================================
+ * Allows users to toggle between monthly and annual
+ * billing view to compare pricing options
+ */
+(function() {
+  'use strict';
+
+  const toggle = document.getElementById('billingToggle');
+  const monthlyLabel = document.getElementById('monthlyLabel');
+  const annualLabel = document.getElementById('annualLabel');
+  const amounts = document.querySelectorAll('.price-card .amount');
+
+  let isAnnual = false;
+
+  /**
+   * Update prices based on billing toggle state
+   */
+  function updatePrices() {
+    amounts.forEach(amount => {
+      const monthlyPrice = amount.getAttribute('data-monthly');
+      const annualPrice = amount.getAttribute('data-annual');
+      amount.textContent = isAnnual ? annualPrice : monthlyPrice;
+    });
+
+    // Update labels
+    monthlyLabel.classList.toggle('active', !isAnnual);
+    annualLabel.classList.toggle('active', isAnnual);
+
+    // Update toggle switch
+    toggle.classList.toggle('active', isAnnual);
+    toggle.setAttribute('aria-checked', isAnnual.toString());
+  }
+
+  /**
+   * Handle toggle click
+   */
+  function handleToggle() {
+    isAnnual = !isAnnual;
+    updatePrices();
+  }
+
+  // Event listeners
+  toggle.addEventListener('click', handleToggle);
+
+  // Keyboard accessibility
+  toggle.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      handleToggle();
+    }
+  });
+
+  // Click on labels
+  monthlyLabel.addEventListener('click', () => {
+    if (isAnnual) handleToggle();
+  });
+
+  annualLabel.addEventListener('click', () => {
+    if (!isAnnual) handleToggle();
+  });
+})();
+</script>
+
+<!-- Plan Selection Script -->
+<script>
+/**
+ * =============================================
+ * PLAN SELECTION - Pricing to Contact Form Integration
+ * =============================================
+ * Features:
+ * - Connects pricing CTA buttons to contact form
+ * - Smooth scroll to contact section
+ * - Auto-populates selected plan in form
+ * - Visual feedback animations
+ * - Manual plan change support
+ */
+(function() {
+  'use strict';
+
+  // =============================================
+  // Configuration
+  // =============================================
+  const SCROLL_OFFSET = 100; // Pixels to offset from top when scrolling
+  const ANIMATION_DELAY = 300; // Delay before focusing on form
+
+  // Plan data mapping
+  const planData = {
+    monthly: {
+      value: 'monthly',
+      name: 'Plan Mensual',
+      price: '40',
+      icon: '🏋️'
+    },
+    quarterly: {
+      value: 'quarterly',
+      name: 'Plan Trimestral',
+      price: '37',
+      icon: '⚡'
+    },
+    annual: {
+      value: 'annual',
+      name: 'Plan Anual',
+      price: '33',
+      icon: '🏆'
+    }
+  };
+
+  // =============================================
+  // DOM Elements
+  // =============================================
+  const planSelect = document.getElementById('contactPlan');
+  const planSelectionGroup = planSelect?.closest('.form-group.plan-selection');
+  const selectedPlanBadge = document.getElementById('selectedPlanBadge');
+  const badgeIcon = document.getElementById('badgeIcon');
+  const badgeText = document.getElementById('badgeText');
+  const badgePrice = document.getElementById('badgePrice');
+  const contactSection = document.getElementById('contact');
+  const contactNameField = document.getElementById('contactName');
+
+  // =============================================
+  // Functions
+  // =============================================
+
+  /**
+   * Smoothly scroll to the contact section
+   * @param {Function} callback - Optional callback after scroll completes
+   */
+  function scrollToContactSection(callback) {
+    if (!contactSection) return;
+
+    const targetPosition = contactSection.getBoundingClientRect().top + window.pageYOffset - SCROLL_OFFSET;
+
+    window.scrollTo({
+      top: targetPosition,
+      behavior: 'smooth'
+    });
+
+    // Execute callback after scroll animation
+    if (callback) {
+      setTimeout(callback, 800);
+    }
+  }
+
+  /**
+   * Update the plan badge visual feedback
+   * @param {Object} plan - Plan data object
+   */
+  function updatePlanBadge(plan) {
+    if (!selectedPlanBadge || !plan) {
+      // Hide badge if no plan
+      selectedPlanBadge?.classList.remove('visible');
+      return;
+    }
+
+    // Update badge content
+    if (badgeIcon) badgeIcon.textContent = plan.icon;
+    if (badgeText) badgeText.textContent = plan.name;
+    if (badgePrice) badgePrice.textContent = `$${plan.price}/mes`;
+
+    // Show badge with animation
+    selectedPlanBadge.classList.add('visible');
+  }
+
+  /**
+   * Select a plan and update the form
+   * @param {string} planKey - The plan identifier (monthly, quarterly, annual)
+   * @param {boolean} scrollToForm - Whether to scroll to form
+   */
+  function selectPlan(planKey, scrollToForm = true) {
+    const plan = planData[planKey];
+    if (!plan || !planSelect) return;
+
+    // Find the card that was clicked and add animation
+    const card = document.querySelector(`.price-card[data-plan="${planKey}"]`);
+    if (card) {
+      card.classList.add('just-selected');
+      setTimeout(() => card.classList.remove('just-selected'), 500);
+    }
+
+    // Scroll to contact form if requested
+    if (scrollToForm) {
+      scrollToContactSection(() => {
+        // Update the select dropdown
+        planSelect.value = plan.value;
+
+        // Add visual feedback class
+        planSelectionGroup?.classList.add('plan-selected');
+
+        // Update the badge
+        updatePlanBadge(plan);
+
+        // Trigger change event for any listeners
+        planSelect.dispatchEvent(new Event('change', { bubbles: true }));
+
+        // Focus on name field after a short delay
+        setTimeout(() => {
+          contactNameField?.focus();
+        }, ANIMATION_DELAY);
+      });
+    } else {
+      // Just update the form without scrolling
+      planSelect.value = plan.value;
+      planSelectionGroup?.classList.add('plan-selected');
+      updatePlanBadge(plan);
+      planSelect.dispatchEvent(new Event('change', { bubbles: true }));
+    }
+  }
+
+  /**
+   * Handle manual plan selection change in the form
+   */
+  function handlePlanSelectChange() {
+    const selectedValue = planSelect.value;
+
+    if (!selectedValue) {
+      // No plan selected
+      planSelectionGroup?.classList.remove('plan-selected');
+      selectedPlanBadge?.classList.remove('visible');
+      return;
+    }
+
+    const plan = planData[selectedValue];
+    if (plan) {
+      planSelectionGroup?.classList.add('plan-selected');
+      updatePlanBadge(plan);
+    }
+  }
+
+  /**
+   * Initialize event listeners for pricing CTA buttons
+   */
+  function initPricingButtons() {
+    // Get all CTA buttons with data-select-plan attribute
+    const ctaButtons = document.querySelectorAll('[data-select-plan]');
+
+    ctaButtons.forEach(button => {
+      button.addEventListener('click', (e) => {
+        e.preventDefault();
+        const planKey = button.getAttribute('data-select-plan');
+        selectPlan(planKey, true);
+      });
+    });
+  }
+
+  /**
+   * Initialize event listener for manual plan selection
+   */
+  function initPlanSelect() {
+    if (planSelect) {
+      planSelect.addEventListener('change', handlePlanSelectChange);
+    }
+  }
+
+  /**
+   * Check URL parameters for pre-selected plan
+   * Allows direct linking with plan: ?plan=quarterly
+   */
+  function checkURLParams() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const planParam = urlParams.get('plan');
+
+    if (planParam && planData[planParam]) {
+      // Small delay to ensure DOM is ready
+      setTimeout(() => {
+        selectPlan(planParam, true);
+      }, 500);
+    }
+  }
+
+  // =============================================
+  // Initialization
+  // =============================================
+  function init() {
+    initPricingButtons();
+    initPlanSelect();
+    checkURLParams();
+
+    // Log successful initialization (dev only)
+    console.log('Plan Selection module initialized');
+  }
+
+  // Initialize when DOM is ready
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+
+  // =============================================
+  // Expose global function for compatibility
+  // =============================================
+  // This replaces the old scrollToContact function
+  window.scrollToContact = function() {
+    scrollToContactSection(() => {
+      contactNameField?.focus();
+    });
+  };
+
+})();
+</script>
+
+<!-- SUCURSALES / BRANCHES SECTION -->
+<section class="branches" id="branches">
+  <h2>Nuestras Sucursales</h2>
+  <p class="branches-subtitle">Visitá cualquiera de nuestras ubicaciones premium con equipamiento de última generación y profesionales certificados</p>
+
+  <div class="branch-cards">
+
+    <!-- Branch Card: Morón -->
+    <div class="branch-card" onclick="abrirMapa('Moron', 'PowerFit Morón')">
+      <div class="branch-image">
+        <img src="images/moron.jpg" alt="PowerFit Morón - Gimnasio Moderno">
+        <span class="branch-badge">Popular</span>
+      </div>
+      <div class="branch-content">
+        <h4>PowerFit Morón</h4>
+        <div class="branch-info">
+          <div class="branch-info-item">
+            <span class="icon">📍</span>
+            <span><strong>Dirección:</strong> Av. Rivadavia 18500, Morón, Buenos Aires</span>
+          </div>
+          <div class="branch-info-item">
+            <span class="icon">🕐</span>
+            <span><strong>Horario:</strong> Lunes a Viernes 6:00 AM - 10:00 PM<br>Sábados 7:00 AM - 9:00 PM</span>
+          </div>
+          <div class="branch-info-item">
+            <span class="icon">📞</span>
+            <span><strong>Teléfono:</strong> +54 9 11 2345-6789</span>
+          </div>
+        </div>
+        <button class="branch-cta">
+          <span>📍 Visitar Sucursal en Mapa</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Branch Card: Moreno -->
+    <div class="branch-card" onclick="abrirMapa('Moreno', 'PowerFit Moreno')">
+      <div class="branch-image">
+        <img src="images/moreno.jpg" alt="PowerFit Moreno - Instalaciones Premium">
+        <span class="branch-badge">Nuevo</span>
+      </div>
+      <div class="branch-content">
+        <h4>PowerFit Moreno</h4>
+        <div class="branch-info">
+          <div class="branch-info-item">
+            <span class="icon">📍</span>
+            <span><strong>Dirección:</strong> Av. Victorica 255, Moreno, Buenos Aires</span>
+          </div>
+          <div class="branch-info-item">
+            <span class="icon">🕐</span>
+            <span><strong>Horario:</strong> Lunes a Viernes 6:00 AM - 10:00 PM<br>Sábados 8:00 AM - 8:00 PM</span>
+          </div>
+          <div class="branch-info-item">
+            <span class="icon">📞</span>
+            <span><strong>Teléfono:</strong> +54 9 11 3456-7890</span>
+          </div>
+        </div>
+        <button class="branch-cta">
+          <span>📍 Visitar Sucursal en Mapa</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Branch Card: Palermo -->
+    <div class="branch-card" onclick="abrirMapa('Palermo', 'PowerFit Palermo')">
+      <div class="branch-image">
+        <img src="images/palermo.jpg" alt="PowerFit Palermo - Centro de Entrenamiento Premium">
+        <span class="branch-badge">Premium</span>
+      </div>
+      <div class="branch-content">
+        <h4>PowerFit Palermo</h4>
+        <div class="branch-info">
+          <div class="branch-info-item">
+            <span class="icon">📍</span>
+            <span><strong>Dirección:</strong> Av. Santa Fe 3500, Palermo, Buenos Aires</span>
+          </div>
+          <div class="branch-info-item">
+            <span class="icon">🕐</span>
+            <span><strong>Horario:</strong> Lunes a Viernes 5:30 AM - 11:00 PM<br>Fines de semana 7:00 AM - 9:00 PM</span>
+          </div>
+          <div class="branch-info-item">
+            <span class="icon">📞</span>
+            <span><strong>Teléfono:</strong> +54 9 11 4567-8901</span>
+          </div>
+        </div>
+        <button class="branch-cta">
+          <span>📍 Visitar Sucursal en Mapa</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Branch Card: Ituzaingó -->
+    <div class="branch-card" onclick="abrirMapa('Ituzaingo', 'PowerFit Ituzaingó')">
+      <div class="branch-image">
+        <img src="images/ituzaingo.jpg" alt="PowerFit Ituzaingó - Gimnasio Moderno">
+        <span class="branch-badge">24/7</span>
+      </div>
+      <div class="branch-content">
+        <h4>PowerFit Ituzaingó</h4>
+        <div class="branch-info">
+          <div class="branch-info-item">
+            <span class="icon">📍</span>
+            <span><strong>Dirección:</strong> Av. Roque Sáenz Peña 1234, Ituzaingó, Buenos Aires</span>
+          </div>
+          <div class="branch-info-item">
+            <span class="icon">🕐</span>
+            <span><strong>Horario:</strong> Abierto 24 horas, todos los días<br>Staff disponible 6:00 AM - 10:00 PM</span>
+          </div>
+          <div class="branch-info-item">
+            <span class="icon">📞</span>
+            <span><strong>Teléfono:</strong> +54 9 11 5678-9012</span>
+          </div>
+        </div>
+        <button class="branch-cta">
+          <span>📍 Visitar Sucursal en Mapa</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- MAP MODAL -->
+  <div id="mapModal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 id="modalBranchTitle">Ubicación de la Sucursal</h3>
+        <button class="modal-close" onclick="cerrarMapa()" aria-label="Cerrar mapa">×</button>
+      </div>
+      <div class="modal-body">
+        <iframe
+          id="mapIframe"
+          src=""
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+/**
+ * BRANCHES MAP MODAL - Interactive Google Maps Display
+ *
+ * This script handles the opening and closing of the map modal
+ * for each gym branch location.
+ */
+
+// Branch locations data with Google Maps embed URLs
+const branchLocations = {
+  'Moron': {
+    name: 'PowerFit Morón',
+    // Morón - Av. Rivadavia area
+    mapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26268.234!2d-58.6197!3d-34.6534!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc7f97c6a6e4b%3A0xc8e3c8e3c8e3c8e3!2sAv.%20Rivadavia%2018500%2C%20Mor%C3%B3n%2C%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1642000000000!5m2!1ses!2sar'
+  },
+  'Moreno': {
+    name: 'PowerFit Moreno',
+    // Moreno - Av. Victorica area
+    mapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26290.145!2d-58.7923!3d-34.6403!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bc9f42c88a7d45%3A0xa2b2a2b2a2b2a2b2!2sAv.%20Victorica%20255%2C%20Moreno%2C%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1642000000000!5m2!1ses!2sar'
+  },
+  'Palermo': {
+    name: 'PowerFit Palermo',
+    // Palermo - Av. Santa Fe area (Premium location)
+    mapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.745!2d-58.4045!3d-34.5875!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb5889876543d%3A0xf7f7f7f7f7f7f7f7!2sAv.%20Santa%20Fe%203500%2C%20Palermo%2C%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1642000000000!5m2!1ses!2sar'
+  },
+  'Ituzaingo': {
+    name: 'PowerFit Ituzaingó',
+    // Ituzaingó - Av. Roque Sáenz Peña area
+    mapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26275.892!2d-58.6634!3d-34.6589!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc6e234a8b7c5%3A0xb4b4b4b4b4b4b4b4!2sAv.%20Roque%20S%C3%A1enz%20Pe%C3%B1a%201234%2C%20Ituzaing%C3%B3%2C%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1642000000000!5m2!1ses!2sar'
+  }
+};
+
+/**
+ * Opens the map modal and loads the Google Maps iframe for the selected branch
+ * @param {string} branchKey - The key identifying the branch (Moron, Moreno, Palermo, Ituzaingo)
+ * @param {string} branchName - The display name of the branch (optional, for modal title)
+ */
+function abrirMapa(branchKey, branchName) {
+  const modal = document.getElementById('mapModal');
+  const iframe = document.getElementById('mapIframe');
+  const modalTitle = document.getElementById('modalBranchTitle');
+
+  // Get branch data
+  const branch = branchLocations[branchKey];
+
+  if (!branch) {
+    console.error(`Branch location not found: ${branchKey}`);
+    return;
+  }
+
+  // Update modal title
+  modalTitle.textContent = branchName || branch.name;
+
+  // Load map iframe
+  iframe.src = branch.mapUrl;
+
+  // Show modal with animation
+  modal.classList.add('active');
+
+  // Prevent body scroll when modal is open
+  document.body.style.overflow = 'hidden';
+}
+
+/**
+ * Closes the map modal and clears the iframe source
+ */
+function cerrarMapa() {
+  const modal = document.getElementById('mapModal');
+  const iframe = document.getElementById('mapIframe');
+
+  // Hide modal
+  modal.classList.remove('active');
+
+  // Clear iframe source to stop loading
+  iframe.src = '';
+
+  // Restore body scroll
+  document.body.style.overflow = '';
+}
+
+// Close modal when clicking outside the modal content
+document.getElementById('mapModal').addEventListener('click', function(e) {
+  if (e.target === this) {
+    cerrarMapa();
+  }
+});
+
+// Close modal with Escape key
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') {
+    const modal = document.getElementById('mapModal');
+    if (modal.classList.contains('active')) {
+      cerrarMapa();
+    }
+  }
+});
+</script>
+
+<!-- =============================================
+     TESTIMONIALS SECTION - Enhanced with 10 Reviews
+     ============================================= -->
+<section class="testimonials" id="testimonials">
+  <h2>Historias de Exito</h2>
+  <p class="testimonials-subtitle">Descubri lo que nuestros miembros dicen sobre su experiencia en PowerFit Gym</p>
+
+  <div class="testimonial-carousel" role="region" aria-label="Testimonios de clientes">
+    <!-- Navigation Buttons -->
+    <button class="carousel-btn prev" id="prevBtn" aria-label="Testimonio anterior">&#8249;</button>
+    <button class="carousel-btn next" id="nextBtn" aria-label="Siguiente testimonio">&#8250;</button>
+
+    <!-- Testimonial Cards Track -->
+    <div class="testimonial-track" id="testimonialTrack">
+
+      <!-- Testimonial 1 -->
+      <article class="testimonial-card">
+        <div class="testimonial-photo">
+          <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=200&q=80" alt="Foto de Laura Martinez">
+        </div>
+        <div class="testimonial-rating" aria-label="5 estrellas">
+          <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+        </div>
+        <p class="testimonial-quote">Gracias a PowerFit Gym logre mis objetivos y mejore mi salud en solo 3 meses. Los entrenadores son increibles y siempre estan ahi para motivarte.</p>
+        <h4 class="testimonial-name">Laura Martinez</h4>
+        <p class="testimonial-details">Miembro hace 8 meses - Sucursal Palermo</p>
+      </article>
+
+      <!-- Testimonial 2 -->
+      <article class="testimonial-card">
+        <div class="testimonial-photo">
+          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80" alt="Foto de Carlos Rodriguez">
+        </div>
+        <div class="testimonial-rating" aria-label="5 estrellas">
+          <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+        </div>
+        <p class="testimonial-quote">Entrenadores profesionales y un ambiente increible. El equipamiento es de primera calidad. Lo recomiendo 100% a cualquiera que busque resultados reales.</p>
+        <h4 class="testimonial-name">Carlos Rodriguez</h4>
+        <p class="testimonial-details">Miembro hace 1 ano - Sucursal Moron</p>
+      </article>
+
+      <!-- Testimonial 3 -->
+      <article class="testimonial-card">
+        <div class="testimonial-photo">
+          <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=200&q=80" alt="Foto de Valentina Perez">
+        </div>
+        <div class="testimonial-rating" aria-label="5 estrellas">
+          <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+        </div>
+        <p class="testimonial-quote">Las clases grupales son divertidas y desafiantes. Amo este lugar y la energia que se siente. Hice amigos increibles mientras me ponia en forma.</p>
+        <h4 class="testimonial-name">Valentina Sanchez</h4>
+        <p class="testimonial-details">Miembro hace 6 meses - Sucursal Moreno</p>
+      </article>
+
+      <!-- Testimonial 4 -->
+      <article class="testimonial-card">
+        <div class="testimonial-photo">
+          <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&q=80" alt="Foto de Martin Gonzalez">
+        </div>
+        <div class="testimonial-rating" aria-label="5 estrellas">
+          <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+        </div>
+        <p class="testimonial-quote">Despues de probar varios gimnasios, finalmente encontre el indicado. El plan nutricional personalizado marco la diferencia en mi transformacion.</p>
+        <h4 class="testimonial-name">Martin Hernandez</h4>
+        <p class="testimonial-details">Miembro hace 2 anos - Sucursal Ituzaingo</p>
+      </article>
+
+      <!-- Testimonial 5 -->
+      <article class="testimonial-card">
+        <div class="testimonial-photo">
+          <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=200&q=80" alt="Foto de Sofia Hernandez">
+        </div>
+        <div class="testimonial-rating" aria-label="5 estrellas">
+          <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+        </div>
+        <p class="testimonial-quote">Como principiante, tenia miedo de ir al gym. Pero el equipo de PowerFit me hizo sentir comoda desde el primer dia. Ahora no puedo vivir sin entrenar.</p>
+        <h4 class="testimonial-name">Sofia Gonzalez</h4>
+        <p class="testimonial-details">Miembro hace 4 meses - Sucursal Palermo</p>
+      </article>
+
+      <!-- Testimonial 6 -->
+      <article class="testimonial-card">
+        <div class="testimonial-photo">
+          <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=200&q=80" alt="Foto de Diego Fernandez">
+        </div>
+        <div class="testimonial-rating" aria-label="4 estrellas">
+          <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9734;</span>
+        </div>
+        <p class="testimonial-quote">El horario 24/7 de Ituzaingo es perfecto para mi trabajo. Puedo entrenar a cualquier hora y siempre hay alguien disponible para ayudar con la tecnica.</p>
+        <h4 class="testimonial-name">Diego Fernandez</h4>
+        <p class="testimonial-details">Miembro hace 10 meses - Sucursal Ituzaingo</p>
+      </article>
+
+      <!-- Testimonial 7 -->
+      <article class="testimonial-card">
+        <div class="testimonial-photo">
+          <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80" alt="Foto de Camila Torres">
+        </div>
+        <div class="testimonial-rating" aria-label="5 estrellas">
+          <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+        </div>
+        <p class="testimonial-quote">Las clases de yoga y pilates son excelentes. Mis dolores de espalda desaparecieron y mi flexibilidad mejoro increiblemente. Gracias PowerFit!</p>
+        <h4 class="testimonial-name">Camila Torres</h4>
+        <p class="testimonial-details">Miembro hace 1 ano - Sucursal Moron</p>
+      </article>
+
+      <!-- Testimonial 8 -->
+      <article class="testimonial-card">
+        <div class="testimonial-photo">
+          <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=200&q=80" alt="Foto de Andres Lopez">
+        </div>
+        <div class="testimonial-rating" aria-label="5 estrellas">
+          <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+        </div>
+        <p class="testimonial-quote">Perdi 15 kilos en 6 meses con el programa de entrenamiento personalizado. Los resultados hablan por si solos. El mejor gimnasio de la zona!</p>
+        <h4 class="testimonial-name">Andres Lopez</h4>
+        <p class="testimonial-details">Miembro hace 7 meses - Sucursal Moreno</p>
+      </article>
+
+      <!-- Testimonial 9 -->
+      <article class="testimonial-card">
+        <div class="testimonial-photo">
+          <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=200&q=80" alt="Foto de Maria Garcia">
+        </div>
+        <div class="testimonial-rating" aria-label="5 estrellas">
+          <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+        </div>
+        <p class="testimonial-quote">La app de seguimiento es genial para ver mi progreso. Me encanta poder registrar mis entrenamientos y ver como mejoro semana a semana.</p>
+        <h4 class="testimonial-name">Maria Garcia</h4>
+        <p class="testimonial-details">Miembro hace 5 meses - Sucursal Palermo</p>
+      </article>
+
+      <!-- Testimonial 10 -->
+      <article class="testimonial-card">
+        <div class="testimonial-photo">
+          <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=200&q=80" alt="Foto de Roberto Sanchez">
+        </div>
+        <div class="testimonial-rating" aria-label="5 estrellas">
+          <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+        </div>
+        <p class="testimonial-quote">A mis 55 anos, pensaba que ya era tarde para empezar. PowerFit me demostro que nunca es tarde. Hoy me siento 20 anos mas joven!</p>
+        <h4 class="testimonial-name">Roberto Carlos</h4>
+        <p class="testimonial-details">Miembro hace 1 ano - Sucursal Moron</p>
+      </article>
+
+    </div>
+
+    <!-- Carousel Dots -->
+    <div class="carousel-dots" id="carouselDots" role="tablist" aria-label="Navegacion de testimonios"></div>
+  </div>
+</section>
+
+<!-- =============================================
+     CONTACT FORM SECTION - Enhanced Design
+     ============================================= -->
+<section class="contact" id="contact">
+  <div class="contact-container">
+
+    <!-- Left Column - Contact Info -->
+    <div class="contact-info-section">
+      <h2>Contactanos y Empeza tu Transformacion</h2>
+      <p class="contact-subtitle">Completa el formulario para solicitar tu clase de prueba gratuita. Nuestro equipo se pondra en contacto contigo en menos de 24 horas.</p>
+
+      <div class="contact-details">
+        <div class="contact-detail-item">
+          <div class="contact-detail-icon" aria-hidden="true">📍</div>
+          <div class="contact-detail-text">
+            <h4>Nuestras Sucursales</h4>
+            <p>Nunez, La Ferrere, Palermo, Ituzaingo</p>
+          </div>
+        </div>
+
+        <div class="contact-detail-item">
+          <div class="contact-detail-icon" aria-hidden="true">📞</div>
+          <div class="contact-detail-text">
+            <h4>Telefono</h4>
+            <p>+54 9 11 1234-5678</p>
+          </div>
+        </div>
+
+        <div class="contact-detail-item">
+          <div class="contact-detail-icon" aria-hidden="true">📧</div>
+          <div class="contact-detail-text">
+            <h4>Email</h4>
+            <p>info@powerfit.com</p>
+          </div>
+        </div>
+
+        <div class="contact-detail-item">
+          <div class="contact-detail-icon" aria-hidden="true">🕐</div>
+          <div class="contact-detail-text">
+            <h4>Horarios de Atencion</h4>
+            <p>Lunes a Viernes: 6:00 AM - 10:00 PM<br>Sabados: 7:00 AM - 8:00 PM</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-social" role="navigation" aria-label="Redes sociales">
+        <a href="#" class="social-link" aria-label="Seguinos en Instagram" title="Instagram">📷</a>
+        <a href="#" class="social-link" aria-label="Seguinos en Facebook" title="Facebook">📘</a>
+        <a href="#" class="social-link" aria-label="Contactanos por WhatsApp" title="WhatsApp">💬</a>
+        <a href="#" class="social-link" aria-label="Seguinos en YouTube" title="YouTube">▶️</a>
+      </div>
+    </div>
+
+    <!-- Right Column - Form -->
+    <div class="contact-form-wrapper">
+      <h3>Solicita tu Clase Gratis</h3>
+
+      <!-- Contact Form -->
+      <form class="contact-form" id="contactForm" novalidate>
+
+        <!-- Name Field -->
+        <div class="form-group">
+          <label for="contactName">Nombre Completo <span class="required">*</span></label>
+          <input
+            type="text"
+            id="contactName"
+            name="name"
+            placeholder="Ej: Juan Perez"
+            required
+            autocomplete="name"
+            aria-describedby="nameError"
+          >
+          <span class="error-message" id="nameError">Por favor, ingresa tu nombre completo</span>
+        </div>
+
+        <!-- Email Field -->
+        <div class="form-group">
+          <label for="contactEmail">Correo Electronico <span class="required">*</span></label>
+          <input
+            type="email"
+            id="contactEmail"
+            name="email"
+            placeholder="Ej: juan@email.com"
+            required
+            autocomplete="email"
+            aria-describedby="emailError"
+          >
+          <span class="error-message" id="emailError">Por favor, ingresa un email valido</span>
+        </div>
+
+        <!-- Phone Field -->
+        <div class="form-group">
+          <label for="contactPhone">Telefono <span class="required">*</span></label>
+          <input
+            type="tel"
+            id="contactPhone"
+            name="phone"
+            placeholder="Ej: 11 2345-6789"
+            required
+            autocomplete="tel"
+            aria-describedby="phoneError"
+            pattern="[0-9\s\-\+]+"
+            inputmode="numeric"
+          >
+          <span class="error-message" id="phoneError">Por favor, ingresa un telefono valido (solo numeros)</span>
+        </div>
+
+        <!-- Branch Selection -->
+        <div class="form-group">
+          <label for="contactBranch">Sucursal Preferida <span class="required">*</span></label>
+          <select
+            id="contactBranch"
+            name="branch"
+            required
+            aria-describedby="branchError"
+          >
+            <option value="" disabled selected>Selecciona una sucursal</option>
+            <option value="nunez">PowerFit Nunez</option>
+            <option value="laferrere">PowerFit La Ferrere</option>
+            <option value="palermo">PowerFit Palermo</option>
+            <option value="ituzaingo">PowerFit Ituzaingo</option>
+          </select>
+          <span class="error-message" id="branchError">Por favor, selecciona una sucursal</span>
+        </div>
+
+        <!-- Plan Selection (populated when user clicks on pricing CTA) -->
+        <div class="form-group plan-selection">
+          <label for="contactPlan">Plan Seleccionado</label>
+          <span class="plan-icon-prefix" aria-hidden="true">📋</span>
+          <select
+            id="contactPlan"
+            name="plan"
+            aria-describedby="planInfo"
+          >
+            <option value="" selected>Sin plan seleccionado</option>
+            <option value="monthly" data-price="40" data-icon="🏋️">Plan Mensual - $40/mes</option>
+            <option value="quarterly" data-price="37" data-icon="⚡">Plan Trimestral - $37/mes</option>
+            <option value="annual" data-price="33" data-icon="🏆">Plan Anual - $33/mes</option>
+          </select>
+          <!-- Visual feedback badge when plan is selected -->
+          <div class="selected-plan-badge" id="selectedPlanBadge">
+            <span class="badge-icon" id="badgeIcon">⚡</span>
+            <span class="badge-text" id="badgeText">Plan seleccionado</span>
+            <span class="badge-price" id="badgePrice">$37/mes</span>
+          </div>
+        </div>
+
+        <!-- Message Field -->
+        <div class="form-group full-width">
+          <label for="contactMessage">Mensaje <span class="required">*</span></label>
+          <textarea
+            id="contactMessage"
+            name="message"
+            placeholder="Contanos tus objetivos o consultas..."
+            required
+            aria-describedby="messageError"
+            rows="4"
+          ></textarea>
+          <span class="error-message" id="messageError">Por favor, escribe un mensaje</span>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" class="submit-btn" id="submitBtn">
+          <span class="btn-text">Enviar mensaje</span>
+          <span class="btn-icon" aria-hidden="true">→</span>
+        </button>
+
+      </form>       
+
+      <!-- Success Message -->
+      <div class="form-success" id="formSuccess">
+        <div class="success-icon" aria-hidden="true">✓</div>
+        <h4>Mensaje Enviado Exitosamente</h4>
+        <p>Gracias por contactarnos. Nuestro equipo se comunicara contigo en las proximas 24 horas para coordinar tu clase de prueba gratuita.</p>
+        <button type="button" class="reset-btn" id="resetFormBtn">Enviar otro mensaje</button>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <h2>PowerFit Gym</h2>
+  <p>Transformá tu vida con nosotros</p>
+  <p>📧 info@powerfit.com | 📞 +54 9 11 1234-5678 | <a href="#">WhatsApp</a></p>
+  <p>Síguenos en <a href="#">Instagram</a> | <a href="#">Facebook</a></p>
+  <p>&copy; 2026 PowerFit Gym. Todos los derechos reservados.</p>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
